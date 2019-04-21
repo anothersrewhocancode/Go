@@ -17,6 +17,10 @@ func contact_handler(w http.ResponseWriter, r *http.Request){
 func main() {
   http.HandleFunc("/", index_handler) 
   http.HandleFunc("/contact/", contact_handler)
-  http.ListenAndServe(":8000", nil)
+  err := http.ListenAndServe(":8000",nil)
+  if err != nil	{
+    fmt.Println(err)
+    return
+  }
 }
 
