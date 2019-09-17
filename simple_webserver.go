@@ -11,7 +11,7 @@ func index_handler(w http.ResponseWriter, r *http.Request){
   if err != nil {
 	  fmt.Fprintln(w, err)
   }
-  fmt.Fprintf(w, "This is v7. Served from:" + name + "\n")
+  fmt.Fprintf(w, "This is v8. Served from:" + name + "\n")
 }
 
 func contact_handler(w http.ResponseWriter, r *http.Request){
