@@ -4,7 +4,7 @@ metadata:
   labels:
     run: goserver
   name: goserver
-  namespace: "${parameters.devnamespace ?: 'dev'}"
+  namespace: '${parameters.devnamespace ?: 'dev'}'
 spec:
   replicas: 1
   selector:
