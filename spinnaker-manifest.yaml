@@ -4,9 +4,9 @@ metadata:
   labels:
     run: goserver
   name: goserver
-  namespace: "${parameters.devnamespace ?: 'dev'}"
+  namespace: parameters.devnamespace ?: 'dev'
 spec:
-  replicas: "${parameters.namespace == 'dev' ? parameters.desiredReplicas = 1 : parameters.desiredReplicas = 5}"
+  replicas: parameters.namespace == 'dev' ? parameters.desiredReplicas = 1 : parameters.desiredReplicas = 5
   selector:
     matchLabels:
       run: goserver
